@@ -1,7 +1,7 @@
 node{
   def mavenHome = tool name: 'Maven'
   stage('1cloneCode'){
-    git "https://https://github.com/c0771866/maven-web-application.git"
+    git "https://github.com/c0771866/maven-web-application.git"
   }
   stage('2Test&Build'){
     sh "${mavenHome}/bin/mvn clean package"
@@ -17,6 +17,7 @@ node{
     // vi pom.xml and added repository details   
     // vi setting.xml and add AUTHENTICATION details  
   } 
+  }
   /*
   stage('5deploy2UAT'){
     sh "echo 'deploy to UAT'  "
